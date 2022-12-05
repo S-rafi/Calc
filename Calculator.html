@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Creation Of Calculator</title>
+	<style type="text/css">
+		table{
+			padding: 10px;
+			border-radius: 10px;
+			margin: auto;
+			height: 300px;
+			width: 400px;
+			background-color: skyblue;
+			box-shadow:4px 6px 5px red;  
+		     }
+		     #casio{
+		     	background-color: yellow;
+		     	font-family: sans-serif;
+		     	color: balck;
+		     	border-color: skyblue;
+		     	box-shadow:  0px 2px 6px black ;
+		     	color: black;
+		     }
+	.display-box{
+		height: 90%;
+		width: 98%;
+		border-radius: 10px;
+		background-color: lightslategrey;
+		font-size: 20px;
+		color: white;
+	}
+	#btn{
+		background-color: red;
+		border: 0.5px solid black;
+	}
+	input[type=button]{
+		font-family: cursive;
+		background-color: #b83dbf;
+		color: white;
+		border: 1px solid black;
+		height: 95%;
+		width: 95%;
+		border-radius: 3px;
+		font-size: 20px;
+	}
+	input[type=button]:active{
+		background-color: brown;
+	}
+     #btn:active{
+     	background-color: green ;
+     }
+	</style>
+</head>
+<body>
+	<h1>Creation Of Calculator By Using HTML CSS And JAVASCRIPT</h1>
+	<table>
+		<tr>
+			<td colspan="4"><input type="button"value="Casio Mini ☠️👻👽Calculator" id="casio"></td>
+ 			</tr>
+
+		<tr>
+			<td colspan="3"><input type="text" name="table" class="display-box" id="ans" disabled></td>
+			<td><input type="button" name="table" id=btn value="C☠️" onclick="clearscreen()"></td>
+		</tr>
+        <tr>
+        	<td><input type="button" value="1☠️" onclick="display('1')"></td>
+        	<td><input type="button" value="2"onclick="display('2')"></td>
+        	<td><input type="button" value="3🤖"onclick="display('3')"></td>
+        	<td><input type="button" value="-"onclick="display('-')"></td>
+        </tr>
+
+        <tr>
+        	<td><input type="button" value="4"onclick="display('4')"></td>
+        	<td><input type="button" value="5"onclick="display('5')"></td>
+        	<td><input type="button" value="6"onclick="display('6')"></td>
+        	<td><input type="button" value="+ "onclick="display('+')"></td>
+        </tr>
+        <tr>
+        	<td><input type="button" value="7"onclick="display('7')"></td>
+        	<td><input type="button" value="8"onclick="display('8')"></td>
+        	<td><input type="button" value="9"onclick="display('9')"></td>
+        	<td><input type="button" value="*"onclick="display('*')"></td>
+        </tr>
+         <tr>
+        	<td><input type="button" value="."onclick="display('.')"></td>
+        	<td><input type="button" value="0👽"onclick="display('0')"></td>
+        	<td><input type="button" value="=" id="btn"onclick="calculate()"></td>
+        	<td><input type="button" value="/"onclick="display('/')"></td>
+        </tr>
+	</table>
+<script type="text/javascript">
+	function clearscreen()
+	{
+		document.getElementById('ans').value=""
+	}
+	function display(value)
+	{
+		document.getElementById('ans').value+=value
+	}
+	function calculate()
+	{
+		var a=document.getElementById('ans').value
+		var b=eval(a)
+		document.getElementById('ans').value=b
+	} 
+
+</script>
+</body>
+</html>
